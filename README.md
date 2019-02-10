@@ -1,1 +1,1 @@
-Psuedo asyncronous DC motor current controller with TI INA219 current sensor
+Psuedo asyncronous DC motor current controller with a motor control header only class. Motor speed change is controlled with slew rates. Uses TI INA219 current sensor as feedback over I2C and outputs PWM for a PWM control motor driver (e.g. TI DRV8833)
