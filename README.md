@@ -6,4 +6,8 @@ Outputs to PWM control motor driver (e.g. TI DRV8833 in this use case).
 <br />
 <br />
 Usage here was developed for Arduino to control multiple motors psuedo asyncronously.
+<<<<<<< HEAD
 Depends on TI INA219 current sensor as feedback over I2C ([software](https://github.com/jeffleo/Arduino-INA219) is developed for Arduino hardware).<br />
+=======
+Depends on TI INA219 current sensor as feedback over I2C ([software](https://github.com/jeffleo/Arduino-INA219) is developed for Arduino hardware).<br />
+>>>>>>> 6633bc073aa2a32898db49c7dd5a4406cae733d9
