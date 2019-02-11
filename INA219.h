@@ -7,7 +7,7 @@
  *
  * Written by Kevin "KTOWN" Townsend for Adafruit Industries.
  * Modified by Jeffrey Leong to implement DSSCircuits I2C libary instead of
- * standard Wire library for bus-lockup timeout and added functions for VIMEE2
+ * standard Wire library for bus-lockup timeout and added I2C bus scanning function
  *
  * BSD license, all text here must be included in any redistribution.
  *
@@ -217,6 +217,7 @@ class Adafruit_INA219{
   float getShuntVoltage_mV(void);
   float getCurrent_mA(void);
   float getPower_mW(void);
+  
   void setAddr(uint8_t addr);
   void scanBus(void);
   void I2C_async_Rx(void);

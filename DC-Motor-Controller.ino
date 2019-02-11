@@ -9,19 +9,17 @@
 Motor Mot_A('A', 0x40, 9, 8, 69.0);   // 69ma minimum for front wheel
 Motor Mot_B('B', 0x44, 11, 10, 70.0); // 60ma minimum for rear wheel
 
-const int DRV_Sleep = 7;
+enum{
+  speed_ctrl=false,
+  trque_ctrl=true,
+};
 
 enum{
   fwd=1,
   rev=-1,
 };
 
-enum{
-  speed_ctrl=false,
-  trque_ctrl=true,
-};
-
-int8_t Roll_dir_state=0;
+int8_t Roll_dir_state=0;                    // drive direction
 
 void setup(void) 
 {
@@ -64,7 +62,7 @@ unsigned long loop_time;                    // for measuring loop rate
 
 void loop(void) 
 {
-// Watchdog Blinker (to detect system crash [happens often])
+// Watchdog Blinker (to detect system crash)
   if ( millis() > last_time + 1000){
     last_time = millis();
     digitalWrite(LED_BUILTIN, Watchdog_LED_state);
